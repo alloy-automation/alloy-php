@@ -1,0 +1,29 @@
+{
+    "name": "alloy-sdk/alloy",
+    "description": "Laravel wrapper package for the Alloy API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mitul Parmar",
+            "email": "mitul@sysbioz.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alloy\\Client\\": "src/"
+        },
+        "files": [
+            "src/Helpers/qm.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alloy\\Client\\AlloyServiceProvider"
+            ]
+        }
+    }
+}
