@@ -19,13 +19,13 @@ php artisan vendor:publish --provider="Larahawk\Watcher\LarahawkServiceProvider"
 <?php
 namespace App\Http\Controllers;
 use Alloy\Client\Alloy;
-use Illuminate\Http\Request;
+
 class AlloyController extends Controller
 {
    public function test(){
  
        $alloy = new Alloy("7a887212-692c-4c23-9d38-1f3120a6d043");
-       return $alloy->event(workflowId:'625fa0ffc895e30013628d5d',    data:{},returnExecutionData:true);
+       return $alloy->event(workflowId:'625fa0ffc895e30013628d5d', data:{}, returnExecutionData:true);
    }
 }
  ```
