@@ -15,7 +15,7 @@ php artisan vendor:publish --provider="Larahawk\Watcher\LarahawkServiceProvider"
 ```
 
 ## Usage
-
+```
 <?php
 namespace App\Http\Controllers;
 use Alloy\Client\Alloy;
@@ -29,7 +29,7 @@ class AlloyController extends Controller
        return $alloy->event(workflowId:'625fa0ffc895e30013628d5d',    data:{},returnExecutionData:true);
 }
 }
- 
+ ```
 
 To send a single event in your application, use `qm()->event(workflowID, data, returnExecutionData)`. Name is a required string, value a required float, and dimension is an optional string that defaults to null.
  
